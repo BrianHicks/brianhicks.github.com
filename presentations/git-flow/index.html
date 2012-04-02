@@ -3,6 +3,8 @@
     <head>
         <title>Git-Flow: you're gonna love this | Brian Hicks</title>
 
+        <link rel="stylesheet" type="text/css" href="/assets/css/git-flow.css" />
+
         <meta charset="UTF-8">
         <meta name="description" content="Git-flow is very awesome. This presentation shows what it is and how you can use it for greatness." />
         <meta name="author" content="Brian Hicks" />
@@ -15,7 +17,7 @@
             <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b>, or <b>Firefox</b> browser.</p>
         </div>
         <div id="impress">
-            <div id="start" class="step" data-x="0" data-y="0">
+            <div id="start" class="step" data-x="0" data-y="0" data-rotate="90">
                 <h1>GIT FLOW</h1>
                 <p>you're gonna love this</p>
             </div>
@@ -32,12 +34,12 @@
 
             <div id="benefits" class="step" data-x="2000" data-y="0">
                 <h2>What's in it for me?</h2>
+                <ul>
+                    <li>Deployments and rollbacks</li>
+                    <li>Release management</li>
+                    <li>Standard branching model across projects</li>
+                </ul>
             </div>
-            <ul>
-                <li class="step" id="deployments" data-x="2000" data-y="50">Deployments and rollbacks</li>
-                <li class="step" id="release" data-x="2000" data-y="100">Release management</li>
-                <li class="step" id="standard" data-x="2000" data-y="200">Standard branching model across projects</li>
-            </ul>
 
             <div id="installation" class="step" data-x="3000" data-y="0">
                 <h2>Installation</h2>
@@ -48,74 +50,82 @@
                 </ul>
             </div>
 
-            <!--start demo-->
+            <!--[>start demo<]-->
 
+            <img src="/assets/img/git-flow-feature.png" style="position: absolute; left: 3750px; top: -525px;">
             <div id="feature-branches">
-                <div class="step" id="feature-start">Start a new branch</div>
-                <pre class="step" id="feature-start-cmd">git flow feature start add-more-bacon</pre>
-                <img class="step" id="feature-start-img" src="#" alt="Feature Start" />
-                <div class="step" id="feature-work">Work in the branch</div>
-                <pre class="step" id="feature-work-command">git ci -m "adding more bacon"</pre>
-                <img class="step" id="feature-work-img" src="#" alt="Feature Work" />
-                <div class="step" id="feature-finish">Finish the feature branch</div>
-                <pre class="step" id="feature-finish-cmd">git flow feature finish add-more-bacon</pre>
-                <img class="step" id="feature-finish-img" src="#" alt="Feature Finish" />
+                <div class="step" data-x="4650" data-y="230" data-scale="1.2" id="feature-start">
+                    Start a new branch
+                    <pre>git flow feature start add-more-bacon</pre>
+                </div>
+                <div class="step" data-x="4650" data-y="430" data-scale="1.2" id="feature-work">
+                    Work in the branch
+                    <pre>git ci -m "adding more bacon"</pre>
+                </div>
+                <div class="step" data-x="4650" data-y="630" data-scale="1.2" id="feature-finish">
+                    Finish the feature branch
+                    <pre>git flow feature finish add-more-bacon</pre>
+                </div>
             </div>
 
             <div id="release-branches">
-                <div class="step" id="release-start">Start a new release</div>
-                <pre class="step" id="release-start-cmd">git flow release start 1.0.0</pre>
-                <img class="step" id="release-start-img" src="#" alt="Release Start" />
-                <div class="step" id="release-bump">Bump version number</div>
-                <pre class="step" id="release-bump-cmd">git ci -m "bump version number to 1.0.0"</pre>
-                <img class="step" id="release-bump-img" src="#" alt="Bump Version Number" />
-                <div class="step" id="release-qa">Add QA fixes</div>
-                <pre class="step" id="release-qa-cmd">git ci -m "add QA fixes"</pre>
-                <img class="step" id="release-qa-img" src="#" alt="Release QA Fixes" />
-                <div class="step" id="release-finish">Finish release</div>
-                <pre class="step" id="release-finish-cmd">git flow release finish 1.0.0</pre>
-                <img class="step" id="release-finish-img" src="#" alt="Finish Release" />
+                <div class="step" data-scale="1.2" data-x="4650" data-y="1070" id="release-start">
+                    Start a new release
+                    <pre>git flow release start 1.0.0</pre>
+                </div>
+                <div class="step" data-scale="1.2" data-x="4650" data-y="1270" id="release-bump">
+                    Bump version number
+                    <pre>git ci -m "bump version number to 1.0.0"</pre>
+                </div>
+                <div class="step" data-scale="1.2" data-x="4650" data-y="1470" id="release-finish">
+                    Finish release
+                    <pre>git flow release finish 1.0.0</pre>
+                </div>
             </div>
 
             <div id="hotfix-branches">
-                <div class="step" id="hotfix-start">Start a new hotfix</div>
-                <pre class="step" id="hotfix-start-cmd">git flow hotfix start 1.0.1</pre>
-                <img class="step" id="hotfix-start-img" src="#" alt="Hotfix Start" />
-                <div class="step" id="hotfix-fix">Fix whatever problem you had</div>
-                <pre class="step" id="hotfix-fix-cmd">git ci -m "fixed the problem with the flux capacitor"</pre>
-                <img class="step" id="hotfix-fix-img" src="#" alt="Commit Fix" />
-                <div class="step" id="hotfix-bump">Bump version number</div>
-                <pre class="step" id="hotfix-bump-cmd">git ci -m "bump version number to 1.0.1"</pre>
-                <img class="step" id="hotfix-bump-img" src="#" alt="Bump Version Number" />
-                <div class="step" id="hotfix-finish">Finish hotfix</div>
-                <pre class="step" id="hotfix-finish-cmd">git flow hotfix finish 1.0.1</pre>
-                <img class="step" id="hotfix-finish-img" src="#" alt="Finish Hotfix" />
+                <div class="step" data-scale="1.2" data-x="4650" data-y="1890" id="hotfix-start">
+                    Start a new hotfix
+                    <pre>git flow hotfix start 1.0.1</pre>
+                </div>
+                <div class="step" data-scale="1.2" data-x="4650" data-y="2090" width=1000 id="hotfix-fix">
+                    Fix the problem
+                    <pre>git ci -m "fixed problem with flux capacitor"</pre>
+                </div>
+                <div class="step" data-scale="1.2" data-x="4650" data-y="2290" id="hotfix-bump">
+                    Bump version number
+                    <pre>git ci -m "bump version number to 1.0.1"</pre>
+                </div>
+                <div class="step" data-scale="1.2" data-x="4650" data-y="2490" id="hotfix-finish">
+                    Finish hotfix
+                    <pre>git flow hotfix finish 1.0.1</pre>
+                </div>
             </div>
         </div>
 
-        <!-- end demo -->
+        <!--[> end demo <]-->
 
-        <div id="nuances-1">
-          <div id="normal-branch">
-            <p>Normal branch</p>
-            <pre>git merge</pre>
-            <img src="#" alt="Normal Branch Merge" />
-          </div>
-          <div id="git-flow-branch">
-            <p>Git flow branch - no fast-forwards</p>
-            <pre>git merge --no-ff</pre>
-            <img src="#" alt="Git flow branch" />
-          </div>
-        </div>
+        <!--<div id="nuances-1" class="step">-->
+          <!--<div id="normal-branch">-->
+            <!--<p>Normal branch</p>-->
+            <!--<pre>git merge</pre>-->
+            <!--<img src="#" alt="Normal Branch Merge" />-->
+          <!--</div>-->
+          <!--<div id="git-flow-branch">-->
+            <!--<p>Git flow branch - no fast-forwards</p>-->
+            <!--<pre>git merge --no-ff</pre>-->
+            <!--<img src="#" alt="Git flow branch" />-->
+          <!--</div>-->
+        <!--</div>-->
 
-        <div id="nuances-2">
-            <p>
-            Tags are created, but not pushed by default. Use
-            <pre>git push --tags</pre> to get them out there.
-            </p>
-        </div>
+        <!--<div id="nuances-2" class="step">-->
+            <!--<p>-->
+            <!--Tags are created, but not pushed by default. Use-->
+            <!--<pre>git push --tags</pre> to get them out there.-->
+            <!--</p>-->
+        <!--</div>-->
 
-        <!--<script src="/assets/scripts/impress.js" type="text/javascript"></script>-->
-        <!--<script>impress().init();</script>-->
+        <script src="/assets/scripts/impress.js" type="text/javascript"></script>
+        <script>impress().init();</script>
     </body>
 </html>
