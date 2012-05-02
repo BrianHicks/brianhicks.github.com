@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Week 1 - What is Machine Learning?"
+note-category: ml-class
 ---
 {% include JB/setup %}
 

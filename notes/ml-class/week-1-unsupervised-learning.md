@@ -1,6 +1,7 @@
 ---
 layout: page
-title: "Week 1 - Supervised Learning"
+title: "Week 1 - Unsupervised Learning"
+note-category: ml-class
 ---
 {% include JB/setup %}
 

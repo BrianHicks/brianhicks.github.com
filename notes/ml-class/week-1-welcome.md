@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Week 1 - Welcome"
+note-category: ml-class
 ---
 {% include JB/setup %}
 
