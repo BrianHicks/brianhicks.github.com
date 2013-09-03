@@ -24,7 +24,7 @@ Hopefully I can remember to "post more in the future" although that's an empty
 promise of many a personal tech blog.
 
 Without further ado, the wrapper (the irony of this being written in Python is
-not lost on my, for the record):
+not lost on me, for the record):
 
     #!/usr/bin/env python
     "Wrapper for posting to a Jekyll blog from the command line"
