@@ -14,3 +14,5 @@ footer. That's all for now!
     <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
+
+Note: the views here are my own, and I don't claim to be speaking here for clients or employers.
